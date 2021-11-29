@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="container" *ngIf="selected; else elseBlock">
+  <div *ngFor="let starship of starships; index as i">
+    <a (click)="viewShip(starship)">
+      <div class="contenido">
+        <div class="card-body">
+          <p>{{ starship.name | uppercase}}</p>
+          <p class="small">{{ starship.model }}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <button (click)="addMore()">View more</button>
+</div>
+
+<ng-template #elseBlock>
+  <div class="contenido1">
+    <img [src]="nave" onerror="this.src=`https://starwars-visualguide.com/assets/img/big-placeholder.jpg`" alt="{{ship.name}}">
+    <h4>{{ ship.name | uppercase}}</h4>
+    <div class="viewDetail">
+      <div class="viewDetailLeft">
+        <div>Model: {{ ship.model }}</div>
+        <div>Cost in credits: {{ ship.cost_in_credits }}</div>
+        <div>Atmospheric Speed: {{ ship.max_atmosphering_speed }}</div>
+      </div>
+      <div class="viewDetailRight">
+        <div>Manufacturer: {{ ship.manufacturer }}</div>
+        <div>Length: {{ ship.length }}</div>
+        <div>Crew: {{ ship.crew }}</div>
+      </div>
+    </div>
+    <button (click)="volver()" class="boton">Volver</button>
+  </div>
+</ng-template>
+
+
+

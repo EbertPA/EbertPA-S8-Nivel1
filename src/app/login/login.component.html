@@ -1,0 +1,24 @@
+<app-header></app-header>
+<div class="container">
+
+  <form (ngSubmit)="logUser()">
+    <input
+      type="text"
+      name="user"
+      placeholder="Username or Email Adress"
+      [(ngModel)]="userName"
+      />
+
+    <input
+      type="text"
+      name="password"
+      placeholder="Password"
+      [(ngModel)]="userPassword"
+      />
+
+    <button>Sign In</button>
+    <span *ngIf="userRegistred">The credentials you entered are incorrect.
+      Reminder: passwords are case sensitive.</span>
+  </form>
+
+</div>

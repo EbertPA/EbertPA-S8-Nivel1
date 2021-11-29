@@ -1,0 +1,33 @@
+<app-header></app-header>
+<div class="container">
+
+  <form (ngSubmit)="newUser()">
+    <input
+      type="text"
+      name="firstName"
+      placeholder="First Name"
+      [(ngModel)]="nuevo.firstName"
+    />
+    <input
+    type="text"
+    name="lastName"
+    placeholder="Last Name"
+    [(ngModel)]="nuevo.lastName"
+  />
+  <input
+    type="email"
+    name="email"
+    placeholder="Email Adress"
+    [(ngModel)]="nuevo.email"
+  />
+  <input
+    type="password"
+    name="password"
+    placeholder="Password"
+    [(ngModel)]="nuevo.password"
+   />
+   <span *ngIf="error">Please enter information.</span>
+    <button>Create Account</button>
+  </form>
+
+</div>

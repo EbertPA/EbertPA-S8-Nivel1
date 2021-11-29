@@ -1,0 +1,33 @@
+.welcome {
+  height: 50vh;
+  color: yellow;
+  padding: 0 10%;
+  margin: 10px auto;
+  font-size: 14px;
+}
+
+.descripcion{
+  text-justify: auto;
+  text-align: justify;
+}
+
+a{
+  margin-left: 50%;
+  text-decoration: none;
+  cursor: pointer;
+  color: #8c8d8d;
+  font-size: small;
+  font-weight: 550;
+}
+a:hover{
+  color: #ffffff;
+}
+
+p{
+  line-height: 2;
+}
+h2 {
+  text-align: center;
+}
+
+

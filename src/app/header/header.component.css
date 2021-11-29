@@ -1,0 +1,54 @@
+.navbarSticky {
+  position: sticky;
+  top: 3px;
+  background-color: #000000;
+}
+
+nav{
+  text-align: center;
+  border-top: 1px solid dimgray;
+  border-bottom: 1px solid dimgray;
+}
+nav > a {
+  padding: 4px 15px 0 15px;
+  text-decoration: none;
+  font-size: small;
+  color: darkgrey;
+  border-left: 1px solid dimgray;
+  border-right: 1px solid dimgray;
+}
+nav > a:hover {
+  color: #ffffff;
+}
+nav > a.active {
+  color: #ffffff;
+  border-bottom: 1px solid blue;
+}
+
+.logo {
+  text-align: center;
+}
+
+img{
+  width: 20%;
+}
+
+.logReg{
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+span {
+  color: rgb(77, 76, 76);
+}
+
+a{
+  text-decoration: none;
+  cursor: pointer;
+  color: #8c8d8d;
+  font-size: small;
+  font-weight: 550;
+}
+a:hover{
+  color: #ffffff;
+}
