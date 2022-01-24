@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +10,26 @@ export class HeaderComponent implements OnInit {
 
   logoStarWars: string = '../assets/images/imgStarWars.png';
 
-  constructor() { }
+  conected: boolean = false;
+  user: string = '';
+
+  constructor(
+    private authService:AuthService
+  ) { }
 
   ngOnInit(): void {
+    this.conected = this.authService.conected();
+    if(this.conected){
+      this.user = this.authService.getUser();
+    }
+    else{
+    }
   }
+
+  logout() {
+    this.authService.logout();
+    this.conected= false;
+  }
+
 
 }

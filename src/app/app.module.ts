@@ -10,7 +10,8 @@ import { StarshipsComponent } from './starships/starships.component';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { StarswarsService } from './starswars.service';
+import { StarswarsService } from './services/starswars.service';
+import { PilotsComponent } from './pilots/pilots.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { StarswarsService } from './starswars.service';
     StarshipsComponent,
     HeaderComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PilotsComponent
   ],
   imports: [
     BrowserModule,

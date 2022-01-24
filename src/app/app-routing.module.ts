@@ -5,19 +5,24 @@ import { StarshipsComponent } from './starships/starships.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
+import { AdminGuard } from './admin.guard';
+
+
+
 const routes: Routes = [
   {
     path: '',
-    // component: HomeComponent,
     redirectTo: 'home',
     pathMatch: 'full'
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    data: {animation: 'HomePage'}
   },
   {
     path: 'starships',
+    canActivate: [AdminGuard],
     component: StarshipsComponent
   },
   {

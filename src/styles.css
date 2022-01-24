@@ -1,7 +1,16 @@
+@font-face {
+  font-family: "dinregular";
+  src:
+      url('assets/fonts/DINPro-Medium_13936.woff2') format('woff2'),
+      url('assets/fonts/DINPro-Medium.woff') format('woff');
+  font-display: swap;
+}
+
 body {
   margin: 0;
   padding: 0;
-  background-color: #000000;
+  background-image: url(./assets/images/space.webp);
+  background-attachment: fixed;
   color: #ffffff;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: dinregular,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

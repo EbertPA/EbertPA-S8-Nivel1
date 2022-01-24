@@ -2,11 +2,19 @@
   <div class="logo">
     <a routerLink="/home"><img [src]="logoStarWars" alt=""></a>
 
-    <div class="logReg">
+    <div class="logReg" *ngIf="!conected; else elseBlock">
       <a routerLink="/login" routerLinkActive="active">LOG IN </a>
       <span>//</span>
       <a routerLink="/register" routerLinkActive="active"> SIGN UP</a>
     </div>
+
+    <ng-template #elseBlock>
+      <div class="logReg">
+        <p class="user">{{ user }} </p>
+        <a routerLink="/home" routerLinkActive="active" (click)="logout()">LOGOUT </a>
+      </div>
+    </ng-template>
+
     <nav>
       <a routerLink="/home"routerLinkActive="active">HOME</a>
       <a routerLink="/starships" routerLinkActive="active">STARSHIPS</a>

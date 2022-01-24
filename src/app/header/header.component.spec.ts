@@ -22,4 +22,24 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have as title ''`, () => {
+    const fixture = TestBed.createComponent(HeaderComponent);
+    const app = fixture.componentInstance;
+    expect(app.user).toEqual('');
+  });
+
+
+  it(`should have as user ''`, () => {
+    const fixture = TestBed.createComponent(HeaderComponent);
+    const app = fixture.componentInstance;
+  });
+
+  // it('should render user', () => {
+  //   const fixture = TestBed.createComponent(HeaderComponent);
+  //   fixture.detectChanges();
+  //   const compiled = fixture.nativeElement as HTMLElement;
+  //   expect(compiled.querySelector('.logReg p')?.textContent).toContain(' ');
+  // });
+
 });

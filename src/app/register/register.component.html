@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="container">
 
-  <form (ngSubmit)="newUser()">
+  <form (ngSubmit)="createUser()">
     <input
       type="text"
       name="firstName"
@@ -24,6 +24,7 @@
     type="password"
     name="password"
     placeholder="Password"
+    autocomplete="off"
     [(ngModel)]="nuevo.password"
    />
    <span *ngIf="error">Please enter information.</span>

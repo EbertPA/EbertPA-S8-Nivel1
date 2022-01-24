@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+// import { Router } from '@angular/router';
 import { Ship } from '../interface/starships.interface';
-import { StarswarsService } from '../starswars.service';
-
+import { StarswarsService } from '../services/starswars.service';
+// import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-starships',
@@ -21,7 +22,11 @@ export class StarshipsComponent implements OnInit {
   selected: boolean = true;
   nave: string='';
 
-  constructor(private starswarsService: StarswarsService) {}
+  constructor(
+    // private router: Router,
+    private starswarsService: StarswarsService,
+    // private authService: AuthService
+  ) {}
 
   ngOnInit(): void {
     if(this.numPage === 1){
@@ -48,7 +53,6 @@ export class StarshipsComponent implements OnInit {
 
   addMore(){
     let totalPages= Math.ceil(this.starswarsService.numReg/10);
-    console.log('this.numPage: ',this.numPage, 'totalPages: ',totalPages);
     if(this.numPage <= totalPages){
       if(this.numPage <= totalPages){
         for(let j=0; j < 10; j++){

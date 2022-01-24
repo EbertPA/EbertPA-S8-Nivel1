@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Usuario {
-  firstName: string;
-  lastName: string;
-  email: string;
-  password: string;
-}
+import { Router } from '@angular/router';
+import { Users } from '../interface/users.interface';
 
 @Component({
   selector: 'app-register',
@@ -14,20 +9,24 @@ interface Usuario {
 })
 export class RegisterComponent implements OnInit {
 
-  nuevo: Usuario = {
+  nuevo: Users = {
     firstName: '',
     lastName: '',
     email: '',
-    password: ''
+    password: '',
+    login: false
   }
+
   error: boolean = false;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
-  newUser(){
+  createUser(){
     if(this.nuevo.firstName.trim().length === 0 ||
        this.nuevo.lastName.trim().length === 0 ||
        this.nuevo.email.trim().length === 0 ||
@@ -44,6 +43,7 @@ export class RegisterComponent implements OnInit {
     );
     this.error = false;
     localStorage.setItem('register',JSON.stringify(this.nuevo));
+    this.router.navigate(['/login']);
 
   }
 

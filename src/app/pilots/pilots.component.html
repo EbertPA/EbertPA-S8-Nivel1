@@ -1,0 +1,17 @@
+<p *ngIf="pilots.length">PILOTS</p>
+<div class="container" *ngFor="let pilot of pilots">
+  <div class="photo">
+    <img [src]="pilot.url" onerror="this.src=`https://starwars-visualguide.com/assets/img/big-placeholder.jpg`"
+      alt="{{pilot.name}}">
+  </div>
+
+  <div class="contenido1">
+    <h4>{{ pilot.name }}</h4>
+    <div>Birth year: {{ pilot.birth_year }}</div>
+    <div>Height: {{ pilot.height }}cm</div>
+    <div>Mass: {{ pilot.mass }}kg</div>
+    <div>Gender: {{ pilot.gender }}</div>
+    <div>Hair Color: {{ pilot.hair_color }}</div>
+    <div>Skin Color: {{ pilot.skin_color }}</div>
+  </div>
+</div>

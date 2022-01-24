@@ -1,9 +1,9 @@
 .welcome {
   height: 50vh;
-  color: yellow;
+  color: #edd700;
   padding: 0 10%;
-  margin: 10px auto;
-  font-size: 14px;
+  font-size: 18px;
+  margin: 0 10%;
 }
 
 .descripcion{
@@ -23,11 +23,15 @@ a:hover{
   color: #ffffff;
 }
 
-p{
-  line-height: 2;
+div{
+  line-height: 1.4;
+  margin-bottom: 15px;
 }
+
 h2 {
   text-align: center;
 }
 
-
+p a {
+  font-size: 20px;
+}

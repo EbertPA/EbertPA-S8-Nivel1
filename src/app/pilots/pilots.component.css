@@ -1,0 +1,55 @@
+* {
+  color: rgb(103, 105, 107);
+}
+
+h4 {
+  color: #b1aeae;
+}
+
+p{
+  text-align: center;
+  color: yellow;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0;
+  background-image: url(../../assets/images/space.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.photo{
+  width: 80%;
+}
+
+.contenido1 {
+  width: 80%;
+  margin-bottom: 15px;
+}
+
+.contenido1 > div {
+  margin: 3px 0;
+}
+
+.photo img {
+  width: 100%;
+}
+
+/* tablets y web */
+@media screen and (min-width: 40em){
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  .contenido1 {
+    width: 100%;
+  }
+
+}

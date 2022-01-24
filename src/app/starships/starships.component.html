@@ -4,7 +4,7 @@
     <a (click)="viewShip(starship)">
       <div class="contenido">
         <div class="card-body">
-          <p>{{ starship.name | uppercase}}</p>
+          <p class="medium">{{ starship.name | uppercase}}</p>
           <p class="small">{{ starship.model }}</p>
         </div>
       </div>
@@ -29,8 +29,10 @@
         <div>Crew: {{ ship.crew }}</div>
       </div>
     </div>
+    <app-pilots [ship]="ship"></app-pilots>
     <button (click)="volver()" class="boton">Volver</button>
   </div>
+
 </ng-template>
 
 

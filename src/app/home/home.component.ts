@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StarswarsService } from '../starswars.service';
+import { StarswarsService } from './../services/starswars.service';
 
 
 @Component({
